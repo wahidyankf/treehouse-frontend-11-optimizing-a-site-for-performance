@@ -17,7 +17,8 @@ var gulp = require('gulp'),
 
 var options = {
     src: 'src', 
-    dist: 'dist'
+    dist: 'dist',
+    test: 'optimization-testing/public'
 };
 
 gulp.task('deploy', function(){ 
@@ -54,6 +55,10 @@ gulp.task('cleanMaster', function(){
     return del(['css/', 'js/', 'img/', 'audio/', 'video/', 'index.html']);
 });
 
+gulp.task('cleanTest', function(){
+    return del([options.test, 'css/', 'js/', 'img/', 'audio/', 'video/', 'index.html']);
+});
+
 gulp.task('cleanAll', function(){
     gulp.start('clean');
     gulp.start('cleanMaster');
@@ -83,15 +88,25 @@ gulp.task('copyAudio', function(){
 });
 
 gulp.task('copyVideo', function(){
-    return gulp.src(options.src + '/video')
+    return gulp.src(options.src + '/video/**')
         .pipe(gulp.dest(options.dist + '/video'));
 });
+
+gulp.task('copyTest', function(){
+    return gulp.src(options.dist + '/**/*')
+        .pipe(gulp.dest(options.test));
+});
+
+gulp.task('prepareTest', ['cleanTest'], function(){
+    gulp.start('copyTest');
+})
 
 gulp.task('build', ['html'], function(){
     gulp.start('copyImage');
     gulp.start('copyFonts');
     gulp.start('copyAudio');
     gulp.start('copyVideo');
+    gulp.start('prepareTest');
 });
 
 gulp.task('deployMaster', function(){
