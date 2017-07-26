@@ -23,6 +23,9 @@
   color: #52ca6d;
   transition: all .3s ease-in-out; }
 
+.menu .inline-list .active a {
+  color: #52ca6d; }
+
 @media only screen and (min-width: 40.063em) {
   .menu {
     height: 7rem; }

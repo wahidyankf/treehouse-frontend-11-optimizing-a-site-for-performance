@@ -38,9 +38,9 @@ gulp.task('compileSass', function () {
         .pipe(maps.init())
         .pipe(sass())
         .pipe(postcss([autoprefixer()]))
-        .pipe(uncss({
-            html: ['src/**/*.html']
-        }))
+        // .pipe(uncss({
+            // html: ['src/**/*.html']
+        // }))
         .pipe(maps.write('./'))
         .pipe(gulp.dest(options.src + '/css'))
         .pipe(browserSync.stream());
@@ -103,12 +103,12 @@ gulp.task('optimizeImage', function () {
                 }]
             }),
             imageminJpegrecompress({
-                min: 25,
-                max: 25,
+                min: 20,
+                max: 20,
                 quality: 'low'
             }),
             imageminPngquant({
-                quality: 25
+                quality: 20
             })
         ]))
         .pipe(gulp.dest(options.src + '/img/'))
