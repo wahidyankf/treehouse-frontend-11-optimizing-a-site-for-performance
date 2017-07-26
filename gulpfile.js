@@ -15,7 +15,6 @@ var gulp = require('gulp'),
     plumber = require('gulp-plumber'),
     htmlmin = require('gulp-htmlmin'),
     imagemin = require('gulp-imagemin'),
-    imageminMozjpeg = require('imagemin-mozjpeg'),
     imageminJpegrecompress = require('imagemin-jpeg-recompress'),
     imageminPngquant = require('imagemin-pngquant'),
     ghPages = require('gulp-gh-pages');
