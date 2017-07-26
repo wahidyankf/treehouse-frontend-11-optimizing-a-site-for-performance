@@ -13,7 +13,6 @@ var gulp = require('gulp'),
     postcss = require('gulp-postcss'),
     autoprefixer = require('autoprefixer'),
     plumber = require('gulp-plumber'),
-    uncss = require('gulp-uncss'),
     htmlmin = require('gulp-htmlmin'),
     imagemin = require('gulp-imagemin'),
     imageminMozjpeg = require('imagemin-mozjpeg'),
@@ -38,9 +37,6 @@ gulp.task('compileSass', function () {
         .pipe(maps.init())
         .pipe(sass())
         .pipe(postcss([autoprefixer()]))
-        // .pipe(uncss({
-            // html: ['src/**/*.html']
-        // }))
         .pipe(maps.write('./'))
         .pipe(gulp.dest(options.src + '/css'))
         .pipe(browserSync.stream());
