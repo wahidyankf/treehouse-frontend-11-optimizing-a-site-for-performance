@@ -24,7 +24,11 @@ This app was tested using [HTML](https://validator.w3.org/) and [CSS](https://ji
 
 ### Initial Test Result
 
-![Initial Test Result](screenshots/initial_test.png)
+![Initial Test Result](screenshots/test_initial.png)
+
+### After Optimization Test Result
+
+![After Optimization Test Result](screenshots/test_after_optimization.png)
 
 ## Sreenshots
 
