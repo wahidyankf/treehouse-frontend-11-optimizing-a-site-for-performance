@@ -1,0 +1,243 @@
+html, body {
+  height: 100%; }
+
+*, *:before, *:after {
+  box-sizing: border-box; }
+
+html, body {
+  font-size: 100%; }
+
+body {
+  background: #fff;
+  color: #222;
+  cursor: auto;
+  font-family: "Helvetica Neue",Helvetica,Roboto,Arial,sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1.5;
+  margin: 0;
+  padding: 0;
+  position: relative; }
+
+a:hover {
+  cursor: pointer; }
+
+img {
+  max-width: 100%;
+  height: auto; }
+
+img {
+  -ms-interpolation-mode: bicubic; }
+
+img {
+  display: inline-block;
+  vertical-align: middle; }
+
+.row {
+  margin: 0 auto;
+  max-width: 62.5rem;
+  width: 100%; }
+
+.row:before, .row:after {
+  content: " ";
+  display: table; }
+
+.row:after {
+  clear: both; }
+
+.columns {
+  padding-left: 0.9375rem;
+  padding-right: 0.9375rem;
+  width: 100%;
+  float: left; }
+
+.columns + .columns:last-child {
+  float: right; }
+
+@media only screen {
+  .columns {
+    position: relative;
+    padding-left: 0.9375rem;
+    padding-right: 0.9375rem;
+    float: left; } }
+
+@media only screen and (min-width: 40.0625em) {
+  .columns {
+    position: relative;
+    padding-left: 0.9375rem;
+    padding-right: 0.9375rem;
+    float: left; }
+  .medium-4 {
+    width: 33.33333%; }
+  .medium-6 {
+    width: 50%; } }
+
+@media only screen and (min-width: 64.0625em) {
+  .columns {
+    position: relative;
+    padding-left: 0.9375rem;
+    padding-right: 0.9375rem;
+    float: left; } }
+
+::-webkit-input-placeholder {
+  color: #666; }
+
+:-moz-placeholder {
+  color: #666; }
+
+::-moz-placeholder {
+  color: #666; }
+
+:-ms-input-placeholder {
+  color: #666; }
+
+.inline-list {
+  list-style: none;
+  margin-top: 0;
+  margin-bottom: 1.0625rem;
+  margin-left: -1.375rem;
+  margin-right: 0;
+  overflow: hidden;
+  padding: 0; }
+
+.inline-list > li {
+  display: block;
+  float: left;
+  list-style: none;
+  margin-left: 1.375rem; }
+
+.inline-list > li > * {
+  display: block; }
+
+div, ul, li, h1, h2, p {
+  margin: 0;
+  padding: 0; }
+
+a {
+  color: #008CBA;
+  line-height: inherit;
+  text-decoration: none; }
+
+a:hover, a:focus {
+  color: #0078a0; }
+
+a img {
+  border: none; }
+
+p {
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: normal;
+  line-height: 1.6;
+  margin-bottom: 1.25rem;
+  text-rendering: optimizeLegibility; }
+
+h1, h2 {
+  color: #222;
+  font-family: "Helvetica Neue",Helvetica,Roboto,Arial,sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1.4;
+  margin-bottom: 0.5rem;
+  margin-top: 0.2rem;
+  text-rendering: optimizeLegibility; }
+
+h1 {
+  font-size: 2.125rem; }
+
+h2 {
+  font-size: 1.6875rem; }
+
+b {
+  font-weight: bold;
+  line-height: inherit; }
+
+ul {
+  font-family: inherit;
+  font-size: 1rem;
+  line-height: 1.6;
+  list-style-position: outside;
+  margin-bottom: 1.25rem; }
+
+ul {
+  margin-left: 1.1rem; }
+
+@media only screen and (min-width: 40.0625em) {
+  h1, h2 {
+    line-height: 1.4; }
+  h1 {
+    font-size: 2.75rem; }
+  h2 {
+    font-size: 2.3125rem; } }
+
+@media print {
+  * {
+    background: transparent !important;
+    color: #000 !important;
+    box-shadow: none !important;
+    text-shadow: none !important; }
+  a, a:visited {
+    text-decoration: underline; }
+  a[href]:after {
+    content: " (" attr(href) ")"; }
+  a[href^="#"]:after {
+    content: ""; }
+  img {
+    page-break-inside: avoid; }
+  img {
+    max-width: 100% !important; }
+  @page {
+    margin: 0.34in; }
+  p, h2 {
+    orphans: 3;
+    widows: 3; }
+  h2 {
+    page-break-after: avoid; } }
+
+.reveal-modal {
+  border-radius: 3px;
+  display: none;
+  position: absolute;
+  top: 0;
+  visibility: hidden;
+  width: 100%;
+  z-index: 1005;
+  left: 0;
+  background-color: #fff;
+  padding: 1.875rem;
+  border: solid 1px #666;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4); }
+
+@media only screen and (max-width: 40em) {
+  .reveal-modal {
+    min-height: 100vh; } }
+
+.reveal-modal > :first-child {
+  margin-top: 0; }
+
+.reveal-modal > :last-child {
+  margin-bottom: 0; }
+
+@media only screen and (min-width: 40.0625em) {
+  .reveal-modal {
+    left: 0;
+    margin: 0 auto;
+    max-width: 62.5rem;
+    right: 0;
+    width: 80%; } }
+
+@media only screen and (min-width: 40.0625em) {
+  .reveal-modal {
+    top: 6.25rem; } }
+
+.reveal-modal .close-reveal-modal {
+  color: #aaa;
+  cursor: pointer;
+  font-size: 2.5rem;
+  font-weight: bold;
+  line-height: 1;
+  position: absolute;
+  top: 0.625rem;
+  right: 1.375rem; }
+
+/*# sourceMappingURL=foundation.min.css.map */

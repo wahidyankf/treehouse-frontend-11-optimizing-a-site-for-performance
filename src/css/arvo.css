@@ -1,0 +1,22 @@
+/* Arvo */
+@font-face {
+  font-family: "Arvo";
+  src: url("../fonts/Arvo/Arvo-Regular.ttf") format("truetype"); }
+
+@font-face {
+  font-family: "Arvo";
+  font-weight: bold;
+  src: url("../fonts/Arvo/Arvo-Bold.ttf") format("truetype"); }
+
+@font-face {
+  font-family: "Arvo";
+  font-weight: bold;
+  font-style: italic;
+  src: url("../fonts/Arvo/Arvo-BoldItalic.ttf") format("truetype"); }
+
+@font-face {
+  font-family: "Arvo";
+  font-style: italic;
+  src: url("../fonts/Arvo/Arvo-Italic.ttf") format("truetype"); }
+
+/*# sourceMappingURL=arvo.css.map */
